@@ -45,11 +45,14 @@ function linkdotfile {
     dest_file="$source_file"
   fi
 
-  if [ ! -e ~/$dest_file -a ! -L ~/$dest_file ]; then
+  if [ ! -e "$HOME/$dest_file" ] && [ ! -L "$HOME/$dest_file" ]; then
       yecho "$dest_file not found, linking..." >&2
-      ln -s ~/dotfiles/$source_file ~/$dest_file
+      ln -s "$HOME/dotfiles/$source_file" "$HOME/$dest_file"
   else
-      gecho "$dest_file found, ignoring..." >&2
+      gecho "$dest_file found, ignoring.." >&2
+      if [ ! -L "$HOME/$dest_file" ]; then
+        wecho "$dest_file is a regular file, not a symlink. You may need to manually create the symlink or delete the file in its place before running the script again"
+      fi
   fi
 }
 
@@ -100,6 +103,8 @@ linkdotfile git/.gitconfig .gitconfig
 linkdotfile zsh/rc.zsh .zshrc
 linkdotfile nvim .config/nvim
 linkdotfile editor/.editorconfig .editorconfig
+linkdotfile vscode/settings.json /Library/Application\ Support/Code/User/settings.json
+linkdotfile vscode/keybindings.json /Library/Application\ Support/Code/User/keybindings.json
 
 ## Install NVM if it doesn't exist. If it does exist, it will NVM will be updated.
 check_and_install_nvm
