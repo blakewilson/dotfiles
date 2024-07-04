@@ -103,6 +103,8 @@ linkdotfile git/.gitconfig .gitconfig
 linkdotfile zsh/rc.zsh .zshrc
 linkdotfile nvim .config/nvim
 linkdotfile editor/.editorconfig .editorconfig
+
+# TODO: May need to check that code is installed prior to running
 linkdotfile vscode/settings.json /Library/Application\ Support/Code/User/settings.json
 linkdotfile vscode/keybindings.json /Library/Application\ Support/Code/User/keybindings.json
 
