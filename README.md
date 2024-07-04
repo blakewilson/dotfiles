@@ -24,7 +24,7 @@ cd brew
 sh install.sh
 ```
 
-This will install all of the brew dependencies and MacOS apps I use as well, like 1Password, Spotify, Postman, etc.
+This will install all of the brew dependencies and MacOS apps I use, like 1Password, Spotify, Postman, etc.
 
 2. Run the `setup.sh` script:
 
@@ -32,7 +32,7 @@ This will install all of the brew dependencies and MacOS apps I use as well, lik
 sh setup.sh
 ```
 
-This will symlink important files (ex. `.zshrc`, `.gitconfig`, `.config/nvim`), install NVM/Oh My Zsh if they don't already exist.
+This will symlink important files (ex. `.zshrc`, `.gitconfig`, `.config/nvim`) and install NVM/Oh My Zsh if they don't already exist.
 
 3. Set MacOS defaults
 
