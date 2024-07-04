@@ -72,12 +72,18 @@ brew "mysql"
 brew "neovim"
 # HTTP load generator, inspired by rakyll/hey with tui animation
 brew "oha"
+# Theme for zsh
+brew "powerlevel10k"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Version control system designed to be a better CVS
 brew "subversion"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Stand alone ad blocker
