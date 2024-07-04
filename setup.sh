@@ -114,5 +114,3 @@ check_and_install_nvm
 ## Install oh my zsh if it doesn't exist
 install_oh_my_zsh
 
-# Install Brew things
-brew bundle install --file=brew/Brewfile
