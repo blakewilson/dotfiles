@@ -1,11 +1,10 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = { "BufWritePre" },
-    cmd = { "ConformInfo" },
+    event = "BufWritePre", -- uncomment for format on save
     keys = {
       {
-        -- Customize or remove this keymap to your liking
+        -- Format with <leader>f
         "<leader>f",
         function()
           require("conform").format { async = true, lsp_format = "fallback" }
@@ -14,27 +13,8 @@ return {
         desc = "Format buffer",
       },
     },
-    -- Everything in opts will be passed to setup()
-    opts = {
-      -- Define your formatters
-      formatters_by_ft = {
-        lua = { "stylua" },
-        python = { "isort", "black" },
-        javascript = { { "prettierd", "prettier" } },
-        php = { "phpcbf", "phpcs" },
-      },
-      -- Set up format-on-save
-      format_on_save = { timeout_ms = 500, lsp_format = "fallback" },
-      -- Customize formatters
-      formatters = {
-        shfmt = {
-          prepend_args = { "-i", "2" },
-        },
-      },
-    },
-    init = function()
-      -- If you want the formatexpr, here is the place to set it
-      vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+    config = function()
+      require "configs.conform"
     end,
   },
 
@@ -44,29 +24,6 @@ return {
       require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
-  },
-
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "stylua",
-        "html-lsp",
-        "css-lsp",
-        "prettier",
-        "typescript-language-server",
-        "svelte-language-server",
-        "tailwindcss-language-server",
-        "markdownlint",
-        "json-lsp",
-        "html-lsp",
-        "eslint-lsp",
-        "codespell",
-        "bash-language-server",
-        "graphql-language-service-cli",
-      },
-    },
   },
 
   {
