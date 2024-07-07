@@ -21,6 +21,7 @@ return {
         lua = { "stylua" },
         python = { "isort", "black" },
         javascript = { { "prettierd", "prettier" } },
+        php = { "phpcbf", "phpcs" },
       },
       -- Set up format-on-save
       format_on_save = { timeout_ms = 500, lsp_format = "fallback" },
@@ -93,7 +94,14 @@ return {
       vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
       vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
     end,
-  }
+  },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup()
+    end,
+  },
 
   -- require('telescope').setup{
   --   defaults = {
