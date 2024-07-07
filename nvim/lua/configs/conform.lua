@@ -8,6 +8,7 @@ local options = {
     css = { { "prettierd", "prettier" } },
     php = { "phpcbf", "phpcs" },
     markdown = { "markdownlint" },
+    ["*"] = { "codespell" },
   },
 
   format_on_save = {
