@@ -21,6 +21,8 @@ brew "php"
 brew "composer", link: false
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Secure runtime for JavaScript and TypeScript
+brew "deno"
 # Library to load and enumerate PKCS#11 modules
 brew "p11-kit"
 # Validating, recursive, caching DNS resolver
@@ -91,6 +93,8 @@ brew "zsh-syntax-highlighting"
 cask "1password"
 # Stand alone ad blocker
 cask "adguard"
+# App to build and share containerised applications and microservices
+cask "docker"
 # Control your Elgato key lights
 cask "elgato-control-center"
 # Focusrite interface controller
