@@ -53,8 +53,20 @@ return {
     }
   end,
   dependencies = { {'nvim-tree/nvim-web-devicons'}}
+},
+
+{
+    "toppair/peek.nvim",
+    event = { "VeryLazy" },
+    build = "deno task --quiet build:fast",
+    config = function()
+        require("peek").setup()
+        vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+        vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+    end,
 }
- -- require('telescope').setup{ 
+
+ -- require('telescope').setup{
  --   defaults = {
  --     file_ignore_patterns = {
  --       "node_modules",
