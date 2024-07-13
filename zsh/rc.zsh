@@ -11,6 +11,9 @@ export DOTFILES="$HOME/dotfiles"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Path to brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Oh my zsh external plugins
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -40,6 +43,9 @@ bindkey "^[f" forward-word
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $DOTFILES/zsh/p10k.zsh ]] || source $DOTFILES/zsh/p10k.zsh
+
+
+
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
