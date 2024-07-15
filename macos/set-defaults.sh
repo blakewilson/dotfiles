@@ -42,6 +42,9 @@ defaults write com.apple.dock autohide -bool true
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
+# Default TextEdit to plain text mode
+defaults write com.apple.TextEdit "RichText" -bool "false"
+
 # Hot corners
 # Possible values:
 #  0: no-op
