@@ -76,6 +76,10 @@ defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
 # Show the full URL in Safari
 defaults write com.apple.Safari "ShowFullURLInSmartSearchField" -bool "true"
 
+# iTerm2 Setup
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
