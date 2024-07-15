@@ -46,6 +46,12 @@ defaults write com.apple.dock autohide -bool true
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
+# Use stacks on desktop
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:GroupBy Kind" ~/Library/Preferences/com.apple.finder.plist
+
+# Use compact tab layout style in Safari
+defaults write com.apple.Safari "ShowStandaloneTabBar" -bool "false"
+
 # Default TextEdit to plain text mode
 defaults write com.apple.TextEdit "RichText" -bool "false"
 

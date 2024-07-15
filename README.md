@@ -45,4 +45,6 @@ cd macos
 sh set-defaults.sh
 ```
 
+NOTE: In order for all preferences to take place, iTerm, or the terminal running the command, must have full disk access and accessibility permissions.
+
 This will set all the MacOS defaults I use (Dock position, key repeating, etc).
