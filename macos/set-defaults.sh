@@ -13,7 +13,7 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Set the mouse tracking speed to something really fast.
-defaults write NSGlobalDomain com.apple.mouse.scaling -float "10"
+defaults write NSGlobalDomain com.apple.mouse.scaling -float 10.0
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -79,6 +79,9 @@ defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
 
 # Show the full URL in Safari
 defaults write com.apple.Safari "ShowFullURLInSmartSearchField" -bool "true"
+
+# Set Safari Tab layout to compact
+defaults write com.apple.Safari "ShowStandaloneTabBar" -bool "false"
 
 # iTerm2 Setup
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
