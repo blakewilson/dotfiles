@@ -1,1 +1,4 @@
 **.DS_Store
+
+# Don't version the MonoLisa font as it's paid
+fonts/MonoLisa/*.otf

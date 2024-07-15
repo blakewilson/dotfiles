@@ -73,6 +73,9 @@ defaults write com.apple.Safari AutoFillPasswords -bool false
 defaults write com.apple.Safari AutoFillCreditCardData -bool false
 defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
 
+# Show the full URL in Safari
+defaults write com.apple.Safari "ShowFullURLInSmartSearchField" -bool "true"
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
