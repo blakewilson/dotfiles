@@ -99,6 +99,7 @@ cask "docker"
 cask "elgato-control-center"
 # Focusrite interface controller
 cask "focusrite-control"
+cask "font-hack-nerd-font"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # WordPress local development tool by Flywheel
