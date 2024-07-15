@@ -67,6 +67,10 @@ defaults write com.apple.Safari AutoFillPasswords -bool false
 defaults write com.apple.Safari AutoFillCreditCardData -bool false
 defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
 
+# iTerm2 Setup
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
