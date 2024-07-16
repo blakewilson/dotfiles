@@ -81,6 +81,8 @@ brew "powerlevel10k"
 brew "python@3.9"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Terminal multiplexer
+brew "tmux"
 # Version control system designed to be a better CVS
 brew "subversion"
 # Display directories as trees (with optional color/HTML output)
