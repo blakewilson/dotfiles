@@ -11,6 +11,13 @@ export DOTFILES="$HOME/dotfiles"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Local rc. Good for environment variables or machine specific config that
+# should not be versioned.
+if [[ -a $HOME/.localrc ]]
+then
+  source $HOME/.localrc
+fi
+
 # Path to brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
