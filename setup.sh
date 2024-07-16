@@ -85,6 +85,17 @@ install_oh_my_zsh() {
   fi
 }
 
+install_tmux_tpm() {
+  # check if $HOME/.tmux/plugins/tpm directory exists
+  if [ -d "$HOME/.tmux/plugins/tpm" ]; then
+    gecho "Tmux TPM already installed"
+  else
+    yecho "Tmux TPM not found. Installing..."
+    # Install tmp tmux plugin
+    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+  fi
+}
+
 # check for pre-req, fail if not found
 function check_preq {
   (command -v $1 > /dev/null  && gecho "$1 found...") ||
@@ -103,6 +114,7 @@ linkdotfile git/.gitconfig .gitconfig
 linkdotfile zsh/rc.zsh .zshrc
 linkdotfile nvim .config/nvim
 linkdotfile editor/.editorconfig .editorconfig
+linkdotfile tmux/.tmux.conf .tmux.conf
 linkdotfile rectangle/config.json /Library/Application\ Support/Rectangle/RectangleConfig.json
 linkdotfile vscode/settings.json /Library/Application\ Support/Code/User/settings.json
 linkdotfile vscode/keybindings.json /Library/Application\ Support/Code/User/keybindings.json
@@ -113,3 +125,5 @@ check_and_install_nvm
 ## Install oh my zsh if it doesn't exist
 install_oh_my_zsh
 
+## Install Tmux TPM plugin if it doesn't exist
+install_tmux_tpm
