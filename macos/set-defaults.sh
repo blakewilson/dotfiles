@@ -52,6 +52,9 @@ defaults write com.apple.dock show-recents -bool false
 # Default TextEdit to plain text mode
 defaults write com.apple.TextEdit "RichText" -bool "false"
 
+# Show seconds on menu clock
+defaults write com.apple.menuextra.clock.plist ShowSeconds -bool true
+
 # Hot corners
 # Possible values:
 #  0: no-op
