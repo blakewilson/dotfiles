@@ -11,4 +11,9 @@
 [init]
 	defaultBranch = main
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
+
+# Local/private config goes in the include.
+# Included at the bottom to allow for overriding of the config above
+[include]
+  path = ~/.gitconfig.local
