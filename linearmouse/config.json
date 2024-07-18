@@ -1,0 +1,33 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "schemes" : [
+    {
+      "buttons" : {
+        "mappings" : [
+          {
+            "option" : false,
+            "control" : false,
+            "command" : false,
+            "shift" : false,
+            "action" : "missionControl",
+            "button" : 2
+          }
+        ],
+        "universalBackForward" : true
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "vendorID" : "0x46d",
+          "productID" : "0xb019",
+          "productName" : "MX Master 2S",
+          "serialNumber" : "80F1D64018B50194"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 10,
+        "speed" : 0.2
+      }
+    }
+  ]
+}
