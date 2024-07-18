@@ -108,8 +108,6 @@ cask "iterm2"
 cask "linearmouse"
 # WordPress local development tool by Flywheel
 cask "local"
-# Software for Logitech devices
-cask "logi-options-plus"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
