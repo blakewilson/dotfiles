@@ -81,10 +81,10 @@ brew "powerlevel10k"
 brew "python@3.9"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Terminal multiplexer
-brew "tmux"
 # Version control system designed to be a better CVS
 brew "subversion"
+# Terminal multiplexer
+brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Fish-like fast/unobtrusive autosuggestions for zsh
@@ -106,6 +106,8 @@ cask "font-hack-nerd-font"
 cask "iterm2"
 # WordPress local development tool by Flywheel
 cask "local"
+# Software for Logitech devices
+cask "logi-options-plus"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
