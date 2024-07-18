@@ -104,6 +104,8 @@ cask "focusrite-control"
 cask "font-hack-nerd-font"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Customise mouse behavior
+cask "linearmouse"
 # WordPress local development tool by Flywheel
 cask "local"
 # Software for Logitech devices
