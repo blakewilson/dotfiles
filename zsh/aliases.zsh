@@ -4,7 +4,7 @@ alias td="tmux detach"
 alias tk="tmux kill-session -t"
 
 # Show human readable list of all files
-alias l='ls -lFh'
+alias l='ls -laFh'
 
 alias reload="source ~/.zshrc"
 
