@@ -6,7 +6,8 @@ alias tk="tmux kill-session -t"
 # Show human readable list of all files
 alias l='ls -laFh'
 
-alias reload="source ~/.zshrc"
+alias r="source ~/.zshrc"
+alias c="clear"
 
 # Git
 alias gaa="git add --all"
