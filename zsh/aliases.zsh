@@ -6,7 +6,10 @@ alias tk="tmux kill-session -t"
 # Show human readable list of all files
 alias l='ls -laFh'
 
+# Reloads the terminal session with updated config
 alias r="source ~/.zshrc"
+
+# Clear the terminal output
 alias c="clear"
 
 # Git
