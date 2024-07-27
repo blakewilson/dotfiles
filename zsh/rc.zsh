@@ -51,16 +51,8 @@ bindkey "^[f" forward-word
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $DOTFILES/zsh/p10k.zsh ]] || source $DOTFILES/zsh/p10k.zsh
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Load aliases
 source $HOME/dotfiles/zsh/aliases.zsh
-
-# Load .nvmrc config
-source $HOME/dotfiles/zsh/nvmrc.zsh
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
@@ -68,3 +60,7 @@ source $HOME/dotfiles/zsh/nvmrc.zsh
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

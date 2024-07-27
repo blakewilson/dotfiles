@@ -74,6 +74,17 @@ check_and_install_nvm() {
     fi
 }
 
+install_volta() {
+  # Check if ~/.volta directory exists
+  if [ -d "$HOME/.volta" ]; then
+    gecho "Volta already installed"
+  else
+    yecho "Volta not found. Installing..."
+    # Install Volta
+    curl https://get.volta.sh | bash -s -- --skip-setup
+  fi
+}
+
 install_oh_my_zsh() {
   # Check if ~/.oh-my-zsh directory exists
   if [ -d "$HOME/.oh-my-zsh" ]; then
@@ -116,15 +127,18 @@ linkdotfile nvim .config/nvim
 linkdotfile editor/.editorconfig .editorconfig
 linkdotfile tmux/.tmux.conf .tmux.conf
 linkdotfile linearmouse/config.json .config/linearmouse/linearmouse.json
-linkdotfile rectangle/config.json /Library/Application\ Support/Rectangle/RectangleConfig.json
-linkdotfile vscode/settings.json /Library/Application\ Support/Code/User/settings.json
-linkdotfile vscode/keybindings.json /Library/Application\ Support/Code/User/keybindings.json
+linkdotfile rectangle/config.json Library/Application\ Support/Rectangle/RectangleConfig.json
+linkdotfile vscode/settings.json Library/Application\ Support/Code/User/settings.json
+linkdotfile vscode/keybindings.json Library/Application\ Support/Code/User/keybindings.json
 
 ## Install NVM if it doesn't exist. If it does exist, it will NVM will be updated.
-check_and_install_nvm
+## check_and_install_nvm
 
 ## Install oh my zsh if it doesn't exist
 install_oh_my_zsh
 
 ## Install Tmux TPM plugin if it doesn't exist
 install_tmux_tpm
+
+## Install Volta if it doesn't exist
+install_volta
