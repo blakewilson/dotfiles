@@ -73,6 +73,31 @@ return {
   },
 
   {
+    "almo7aya/openingh.nvim",
+    config = function()
+      require("openingh").setup()
+    end,
+    keys = {
+      {
+        "<leader>gf",
+        ":OpenInGHFile<CR>",
+        mode = "n",
+        noremap = true,
+        silent = true,
+        desc = "Open file on Git Web",
+      },
+      {
+        "<leader>gf",
+        ":'<,'>OpenInGHFile<CR>",
+        mode = "x",
+        noremap = true,
+        silent = true,
+        desc = "Open file lines on Git Web",
+      },
+    },
+  },
+
+  {
     "lewis6991/gitsigns.nvim",
     config = function()
       require("gitsigns").setup {
