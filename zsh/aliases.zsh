@@ -2,6 +2,7 @@
 alias ta="tmux attach -t"
 alias td="tmux detach"
 alias tk="tmux kill-session -t"
+alias tls="tmux ls"
 
 # Show human readable list of all files
 alias l='ls -laFh'
