@@ -126,6 +126,7 @@ linkdotfile zsh/rc.zsh .zshrc
 linkdotfile nvim .config/nvim
 linkdotfile editor/.editorconfig .editorconfig
 linkdotfile tmux/.tmux.conf .tmux.conf
+linkdotfile wezterm/config.lua .wezterm.lua
 linkdotfile linearmouse/config.json .config/linearmouse/linearmouse.json
 linkdotfile rectangle/config.json Library/Application\ Support/Rectangle/RectangleConfig.json
 linkdotfile vscode/settings.json Library/Application\ Support/Code/User/settings.json
