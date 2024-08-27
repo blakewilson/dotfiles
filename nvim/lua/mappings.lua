@@ -19,6 +19,7 @@ map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" }
 
 -- telescope
 map("n", "<leader>t", "<cmd>Telescope <CR>", { desc = "telescope" })
+map("n", "<leader>b", "<cmd>Telescope buffers <CR>", { desc = "telescope" })
 map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
 map(

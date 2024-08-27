@@ -258,8 +258,12 @@ return {
     config = function()
       require("lualine").setup {
         options = {
-          disable_filetypes = { "NvimTree" },
           theme = "gruvbox-material",
+        },
+        sections = {
+          lualine_c = {
+            { "filename", path = 1 },
+          },
         },
       }
     end,
