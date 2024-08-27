@@ -8,7 +8,7 @@ local options = {
     update_root = false,
   },
   view = {
-    width = 30,
+    width = 50,
     preserve_window_proportions = true,
   },
   renderer = {
