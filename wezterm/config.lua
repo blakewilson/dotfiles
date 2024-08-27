@@ -15,7 +15,7 @@ config.font_size = 13
 -- config.color_scheme = "Tokyo Night"
 
 -- Slightly transparent and blurred background
-config.window_background_opacity = 0.85
+config.window_background_opacity = 1
 config.macos_window_background_blur = 30
 
 -- Removes the title bar, leaving only the tab bar. Keeps
