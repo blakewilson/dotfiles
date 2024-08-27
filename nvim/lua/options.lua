@@ -57,9 +57,6 @@ g.loaded_ruby_provider = 0
 -- For diff changes
 vim.opt.fillchars:append { diff = "╱" }
 
--- Color scheme
-vim.cmd [[colorscheme tokyonight-night]]
-
 -- add binaries installed by mason.nvim to path
 local is_windows = vim.fn.has "win32" ~= 0
 local sep = is_windows and "\\" or "/"

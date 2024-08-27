@@ -156,17 +156,23 @@ return {
             "node_modules",
             "dist",
           },
-          theme = "tokyonight-night",
+          theme = "gruvbox-material",
         },
       }
     end,
   },
 
   {
-    "folke/tokyonight.nvim",
+    "sainnhe/gruvbox-material",
     lazy = false,
     priority = 1000,
-    opts = {},
+    config = function()
+      -- Optionally configure and load the colorscheme
+      -- directly inside the plugin declaration.
+      vim.g.gruvbox_material_background = "hard"
+      vim.g.gruvbox_material_enable_italic = true
+      vim.cmd.colorscheme "gruvbox-material"
+    end,
   },
 
   {
@@ -180,21 +186,6 @@ return {
       return require "../configs.nvimtree"
     end,
   },
-
-  --   {
-  --     "williamboman/mason.nvim",
-  --     "williamboman/mason-lspconfig.nvim",
-  --     "neovim/nvim-lspconfig",
-  --     cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
-  --     event = { "User FilePost" },
-  --     config = function()
-  --       require("mason").setup()
-  --       require("mason-lspconfig").setup({
-  --         ensure_installed = { "html", "cssls", "tsserver", "intelephense", "bashls", "eslint", "tailwindcss", "jsonls" },
-  --         automatic_installation = true
-  --       })
-  --     end,
-  -- },
 
   {
     "christoomey/vim-tmux-navigator",
@@ -268,15 +259,7 @@ return {
       require("lualine").setup {
         options = {
           disable_filetypes = { "NvimTree" },
-          sections = {
-            lualine_c = {
-              {
-                "filename",
-                file_status = true,
-                path = 1,
-              },
-            },
-          },
+          theme = "gruvbox-material",
         },
       }
     end,

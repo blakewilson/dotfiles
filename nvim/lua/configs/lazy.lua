@@ -1,6 +1,6 @@
 return {
   defaults = { lazy = true },
-  install = { colorscheme = { "tokyonight-night" } },
+  -- install = { colorscheme = { "tokyonight-night" } },
 
   ui = {
     icons = {
