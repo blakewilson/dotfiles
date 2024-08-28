@@ -25,6 +25,8 @@ config.macos_window_background_blur = 30
 -- them into the tab bar.
 config.window_decorations = "RESIZE"
 
+config.color_scheme = "GruvboxDarkHard"
+
 -- Sets the font for the window frame (tab bar)
 config.window_frame = {
   font = wezterm.font({ family = "MonoLisa", weight = "Bold" }),

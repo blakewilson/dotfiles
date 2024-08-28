@@ -157,7 +157,6 @@ return {
             "dist",
           },
           theme = "gruvbox-material",
-          initial_mode = "normal",
           mappings = {
             n = {
               ["d"] = require("telescope.actions").delete_buffer,
