@@ -29,6 +29,13 @@ map(
   { desc = "telescope find all files" }
 )
 
+-- barbar
+map("n", "<C-[>", "<Cmd>BufferPrevious<CR>", opts)
+map("n", "<C-]>", "<Cmd>BufferNext<CR>", opts)
+
+-- Pin/unpin buffer
+-- map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
+
 map("t", "<Esc>", [[<C-\><C-n>]], { noremap = true })
 map("n", '"+y', "<leader>y")
 
