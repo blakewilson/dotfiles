@@ -48,3 +48,10 @@ map(
   "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>",
   { desc = "telescope find all files" }
 )
+
+-- barbar
+map("n", "<C-[>", "<Cmd>BufferPrevious<CR>", opts)
+map("n", "<C-]>", "<Cmd>BufferNext<CR>", opts)
+
+-- Pin/unpin buffer
+-- map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)

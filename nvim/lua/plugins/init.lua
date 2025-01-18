@@ -156,7 +156,8 @@ return {
             "node_modules",
             "dist",
           },
-          theme = "gruvbox-material",
+          theme = "tokyonight",
+          initial_mode = "normal",
           mappings = {
             n = {
               ["d"] = require("telescope.actions").delete_buffer,
@@ -167,16 +168,25 @@ return {
     end,
   },
 
+  -- {
+  --   "sainnhe/gruvbox-material",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     -- Optionally configure and load the colorscheme
+  --     -- directly inside the plugin declaration.
+  --     vim.g.gruvbox_material_background = "hard"
+  --     vim.g.gruvbox_material_enable_italic = true
+  --     vim.cmd.colorscheme "gruvbox-material"
+  --   end,
+  -- },
+
   {
-    "sainnhe/gruvbox-material",
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    config = function()
-      -- Optionally configure and load the colorscheme
-      -- directly inside the plugin declaration.
-      vim.g.gruvbox_material_background = "hard"
-      vim.g.gruvbox_material_enable_italic = true
-      vim.cmd.colorscheme "gruvbox-material"
+    init = function()
+      vim.cmd.colorscheme "tokyonight-night"
     end,
   },
 
@@ -263,7 +273,7 @@ return {
     config = function()
       require("lualine").setup {
         options = {
-          theme = "gruvbox-material",
+          theme = "tokyonight",
         },
         sections = {
           lualine_c = {
@@ -281,6 +291,28 @@ return {
     config = function()
       require("diffview").setup()
     end,
+  },
+
+  {
+    "romgrk/barbar.nvim",
+    lazy = false,
+    dependencies = {
+      "lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
+      "nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
+    },
+    init = function()
+      vim.g.barbar_auto_setup = true
+    end,
+    opts = {
+      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+      -- animation = true,
+      -- insert_at_start = true,
+      -- …etc.
+      sidebar_filetypes = {
+        -- Use the default values: {event = 'BufWinLeave', text = '', align = 'left'}
+        NvimTree = true,
+      },
+    },
   },
 
   {

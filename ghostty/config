@@ -1,0 +1,9 @@
+theme = tokyonight
+window-height=30
+window-width=110
+
+window-title-font-family="MonoLisa Variable"
+
+font-family="MonoLisa Variable"
+font-size=14
+font-thicken=true

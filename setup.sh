@@ -131,6 +131,7 @@ linkdotfile linearmouse/config.json .config/linearmouse/linearmouse.json
 linkdotfile rectangle/config.json Library/Application\ Support/Rectangle/RectangleConfig.json
 linkdotfile vscode/settings.json Library/Application\ Support/Code/User/settings.json
 linkdotfile vscode/keybindings.json Library/Application\ Support/Code/User/keybindings.json
+linkdotfile ghostty/config .config/ghostty/config
 
 ## Install NVM if it doesn't exist. If it does exist, it will NVM will be updated.
 ## check_and_install_nvm
