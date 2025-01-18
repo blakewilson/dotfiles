@@ -2,7 +2,7 @@ local map = vim.keymap.set
 
 -- general
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "General Clear highlights" })
-map("n", "<leader>x", "<cmd>bd<CR>", { desc = "buffer close" })
+-- map("n", "<leader>x", "<cmd>bd<CR>", { desc = "buffer close" })
 map("t", "<Esc>", [[<C-\><C-n>]], { desc = "Cancel out of terminal mode", noremap = true })
 map("n", '"+y', "<leader>y", { desc = "Copy to system clipboard" })
 map("n", "<leader>dd", function()
@@ -55,3 +55,5 @@ map("n", "<C-]>", "<Cmd>BufferNext<CR>", opts)
 
 -- Pin/unpin buffer
 -- map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
+
+map("n", "<leader>x", "<Cmd>BufferClose<CR>")
