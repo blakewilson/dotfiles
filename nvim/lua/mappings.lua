@@ -55,12 +55,3 @@ map("n", "<C-]>", "<Cmd>BufferNext<CR>", opts)
 
 -- Pin/unpin buffer
 -- map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
-
-map("t", "<Esc>", [[<C-\><C-n>]], { noremap = true })
-map("n", '"+y', "<leader>y")
-
-map("n", "<leader>dd", function()
-  vim.diagnostic.open_float()
-end, { desc = "toggles local errors/diagnostic" })
-
-map("n", "<leader>x", "<cmd>bd<CR>", { desc = "buffer close" })
