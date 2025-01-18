@@ -87,6 +87,8 @@ brew "subversion"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Watch files and take action when they change
+brew "watchman"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
@@ -102,6 +104,8 @@ cask "elgato-control-center"
 # Focusrite interface controller
 cask "focusrite-control"
 cask "font-hack-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Customise mouse behavior
@@ -130,6 +134,8 @@ cask "visual-studio-code"
 cask "vlc"
 # Resources for Wacom tablets
 cask "wacom-tablet"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
 vscode "ardenivanov.svelte-intellisense"
 vscode "astro-build.astro-vscode"
 vscode "bmewburn.vscode-intelephense-client"
