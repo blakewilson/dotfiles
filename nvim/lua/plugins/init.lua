@@ -156,7 +156,7 @@ return {
             "node_modules",
             "dist",
           },
-          theme = "gruvbox-material",
+          theme = "tokyonight",
           initial_mode = "normal",
           mappings = {
             n = {
@@ -168,16 +168,25 @@ return {
     end,
   },
 
+  -- {
+  --   "sainnhe/gruvbox-material",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     -- Optionally configure and load the colorscheme
+  --     -- directly inside the plugin declaration.
+  --     vim.g.gruvbox_material_background = "hard"
+  --     vim.g.gruvbox_material_enable_italic = true
+  --     vim.cmd.colorscheme "gruvbox-material"
+  --   end,
+  -- },
+
   {
-    "sainnhe/gruvbox-material",
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    config = function()
-      -- Optionally configure and load the colorscheme
-      -- directly inside the plugin declaration.
-      vim.g.gruvbox_material_background = "hard"
-      vim.g.gruvbox_material_enable_italic = true
-      vim.cmd.colorscheme "gruvbox-material"
+    init = function()
+      vim.cmd.colorscheme "tokyonight-night"
     end,
   },
 
@@ -264,7 +273,7 @@ return {
     config = function()
       require("lualine").setup {
         options = {
-          theme = "gruvbox-material",
+          theme = "tokyonight",
         },
         sections = {
           lualine_c = {
