@@ -25,7 +25,7 @@ config.macos_window_background_blur = 30
 -- them into the tab bar.
 config.window_decorations = "RESIZE"
 
-config.color_scheme = "GruvboxDarkHard"
+config.color_scheme = "tokyonight"
 
 -- Sets the font for the window frame (tab bar)
 config.window_frame = {
