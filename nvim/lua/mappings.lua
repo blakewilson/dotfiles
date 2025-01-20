@@ -50,8 +50,8 @@ map(
 )
 
 -- barbar
-map("n", "<C-[>", "<Cmd>BufferPrevious<CR>", opts)
-map("n", "<C-]>", "<Cmd>BufferNext<CR>", opts)
+map("n", "<C-[>", "<Cmd>BufferPrevious<CR>")
+map("n", "<C-]>", "<Cmd>BufferNext<CR>")
 
 -- Pin/unpin buffer
 -- map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
