@@ -8,6 +8,8 @@
 
 There are a few scripts in here that do different things. At some point, it may make sense to combine them into one bootstrap script, but for now they are broken up.
 
+**NOTE: The terminal app being used must have full disk access and accessibility permissions on MacOS for the bootstrap scripts to work correctly.**
+
 For a new system, install should occur in the following order:
 
 0. Clone the repo into `~/dotfiles`:
@@ -44,7 +46,5 @@ This will symlink important files (ex. `.zshrc`, `.gitconfig`, `.config/nvim`) a
 cd macos
 sh set-defaults.sh
 ```
-
-NOTE: In order for all preferences to take place, iTerm, or the terminal running the command, must have full disk access and accessibility permissions.
 
 This will set all the MacOS defaults I use (Dock position, key repeating, etc).

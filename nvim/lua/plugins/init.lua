@@ -157,7 +157,7 @@ return {
             "dist",
           },
           theme = "tokyonight",
-          initial_mode = "normal",
+          initial_mode = "insert",
           mappings = {
             n = {
               ["d"] = require("telescope.actions").delete_buffer,
