@@ -18,3 +18,6 @@ alias gaa="git add --all"
 
 # NPM
 alias nmd="npx npkill"
+
+# Claude
+alias claude-yolo="claude --dangerously-skip-permissions"
