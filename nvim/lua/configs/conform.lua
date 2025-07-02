@@ -1,11 +1,11 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    javascript = { { "prettierd", "prettier" } },
-    typescript = { { "prettierd", "prettier" } },
-    json = { { "prettierd", "prettier" } },
-    html = { { "prettierd", "prettier" } },
-    css = { { "prettierd", "prettier" } },
+    javascript = { { "biome" }, { "prettier" } },
+    typescript = { { "biome" }, { "prettier" } },
+    json = { { "biome" }, { "prettier" } },
+    html = { { "biome" }, { "prettier" } },
+    css = { { "biome" }, { "prettier" } },
     php = { "phpcbf", "phpcs" },
     markdown = { "markdownlint" },
     ["*"] = { "codespell" },
