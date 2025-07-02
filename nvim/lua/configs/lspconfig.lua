@@ -55,20 +55,33 @@ local on_attach = LSPHelpers.on_attach
 local on_init = LSPHelpers.on_init
 local capabilities = LSPHelpers.capabilities
 
-require("mason-lspconfig").setup_handlers {
-  -- The first entry (without a key) will be the default handler
-  -- and will be called for each installed server that doesn't have
-  -- a dedicated handler.
-  function(server_name) -- default handler (optional)
-    require("lspconfig")[server_name].setup {
+-- Configure LSP servers
+local function setup_servers()
+  local lspconfig = require("lspconfig")
+  local mason_lspconfig = require("mason-lspconfig")
+  
+  -- Get all installed servers from mason-lspconfig
+  local installed_servers = mason_lspconfig.get_installed_servers()
+  
+  -- Set up each server with the common config
+  for _, server_name in ipairs(installed_servers) do
+    lspconfig[server_name].setup {
       on_attach = on_attach,
       on_init = on_init,
       capabilities = capabilities,
     }
-  end,
-  -- Next, you can provide a dedicated handler for specific servers.
-  -- For example, a handler override for the `rust_analyzer`:
-  -- ["rust_analyzer"] = function(
-  --   require("rust-tools").setup {}
-  -- end,
-}
+  end
+  
+  -- You can also set up servers with custom configurations
+  -- For example:
+  -- lspconfig.rust_analyzer.setup {
+  --   on_attach = on_attach,
+  --   on_init = on_init,
+  --   capabilities = capabilities,
+  --   -- Custom settings for rust_analyzer
+  --   settings = { ... }
+  -- }
+ end
+
+-- Initialize servers
+setup_servers()
