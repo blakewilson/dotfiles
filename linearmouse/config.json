@@ -18,10 +18,8 @@
       "if" : {
         "device" : {
           "category" : "mouse",
-          "vendorID" : "0x46d",
-          "productID" : "0xb019",
-          "productName" : "MX Master 2S",
-          "serialNumber" : "80F1D64018B50194"
+          "vendorID" : "0x046D",
+          "productID" : "0xB035"
         }
       },
       "pointer" : {
